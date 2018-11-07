@@ -27,7 +27,7 @@
         
             
          
-        <p class="price-container"><span class=""><span>€</span>{{cartProduct.price}}</span><span></span></p>
+        <p class="price-container"> <span *ngIf="cartProduct.inOffer" class="offer-price" > <span>€</span>{{cartProduct.offerPrice}} </span><span [ngClass] = "{'price-product': (cartProduct.inOffer == true), 'normal-price':cartProduct.inOffer == false }"><span>€</span>{{cartProduct.price}}</span></p>
         
         <button class="remove-product-cart" ion-button (click) = "removeCartProduct(cartProduct)"><ion-icon name="close"></ion-icon></button>
       </ion-item>

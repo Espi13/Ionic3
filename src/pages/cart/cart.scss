@@ -1,6 +1,7 @@
 page-cart {
     .total-price{
         float: right;
+        font-weight: bold;
     }
     .price-container{
         float:right; 
@@ -12,6 +13,10 @@ page-cart {
 
     ion-label.label.label-md{
         position: relative
+    }
+    .offer-price{
+        text-decoration: line-through;
+        margin-right: 10px;
     }
     .text-container{
         float: left;
