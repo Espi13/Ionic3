@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ProductsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Products</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h3>{{category.name}}</h3>
+<ion-list>
+  <ion-item class="no-products" *ngIf="!productService || productService.products.length == 0">Add some product to your category</ion-item>
+  <ion-item-sliding class="item-container" *ngFor="let product of productService.products | offerProductsPipe">
+    <ion-item>
+      <div class="product-container">
+        <div class="image-container">
+          <img *ngIf="!product.imageUrl ==''" [src]="product.imageUrl" alt="{{product.name}}">
+        </div>
+        <div class="text-container">
+          <h4 class="name-product">{{product.name}}</h4>
+          <p class="description-product">{{product.description}}</p>
+          <p> <span [ngClass] = "{'price-product': (product.inOffer == true), 'normal-price':product.inOffer == false }"> <span>€</span>{{product.price}}</span> <span *ngIf="product.inOffer" class="offer-price" > <span>€</span>{{product.offerPrice}} </span></p>
+          <button ion-button  outline (click) = "addToCart(product)"> Buy</button>
+        </div>
+      </div>
+    </ion-item>
+    <ion-item-options side="right">
+      <button  ion-button (click) = "showEditProduct(product)">
+        <ion-icon name="create"></ion-icon>Edit
+      </button>
+      <button ion-button  color="danger" (click) = "removeTodo(todo)">
+          <ion-icon name="remove-circle"></ion-icon>Remove
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+  
+</ion-list>
+</ion-content>
+<ion-fab  bottom right>
+    <button ion-fab (click) = "showAddProduct()"><ion-icon name="add"></ion-icon></button>
+  
+</ion-fab>

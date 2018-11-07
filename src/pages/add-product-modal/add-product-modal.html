@@ -1,0 +1,61 @@
+<!--
+  Generated template for the AddProductModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-toolbar color = "primary">
+        <ion-title>{{title}}</ion-title>
+        <ion-buttons start>
+            <button ion-button (click)= "dismiss()">
+                
+              <ion-icon name="md-close" ></ion-icon>
+            </button>
+        </ion-buttons>
+      </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list no-lines >
+        <form (ngSubmit) ="submit()"  class="container">
+          <ion-item><ion-label>Product Name</ion-label>
+            <ion-input  clearInput [(ngModel)]="model.name" name="name" #nameState="ngModel"></ion-input>
+          </ion-item>
+          <ion-item color="danger" [hidden] = "nameState.valid || nameState.untouched">
+              Product name is required
+          </ion-item>
+          <ion-item><ion-label>Product Description</ion-label>
+            <ion-input  clearInput [(ngModel)]="model.description" name="description" #descriptionState="ngModel"></ion-input>
+          </ion-item>
+          <ion-item color="danger" [hidden] = "descriptionState.valid || descriptionState.untouched">
+              Product description is required
+          </ion-item>
+          <ion-item><ion-label>Product Price</ion-label>
+            <ion-input type="number" min="1" max="9999" clearInput [(ngModel)]="model.price" name="price" #priceState="ngModel"></ion-input>
+          </ion-item>
+          <ion-item color="danger" [hidden] = "priceState.valid || priceState.untouched">
+              Product price is required
+          </ion-item>
+          <ion-item>
+            <ion-label>In offer</ion-label>
+            <ion-checkbox [(ngModel)]="model.inOffer" name="inOffer" #inOfferState="ngModel" (ionChange)="updateChecked()"></ion-checkbox>
+          </ion-item>
+          <ion-item *ngIf="model.inOffer"><ion-label>Product Price on Offer</ion-label>
+            <ion-input type="number" min="1" max="9999" clearInput [(ngModel)]="model.offerPrice" name="offerPrice" #offerPriceState="ngModel"></ion-input>
+          </ion-item>
+          <ion-item color="danger" [hidden] = "priceState.valid || priceState.untouched">
+              Product price is required
+          </ion-item>
+          <ion-item>
+              <ion-input  placeholder="Imgage Url" clearInput [(ngModel)]="model.imageUrl" name="imageUrl"></ion-input>
+            </ion-item>
+          <div class="submit-button">
+            <button ion-button block type="submit" [disabled]="!nameState.valid || !descriptionState.valid || !priceState.valid">{{buttonText}}</button>
+          </div>
+        </form>
+      </ion-list>
+</ion-content>

@@ -1,0 +1,103 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Shirts",
+      "imageUrl": "https://smhttp-ssl-33667.nexcesscdn.net/manual/wp-content/uploads/2016/02/shirt-stack2-e1454531194148.jpg"
+    },
+    {
+      "name": "Shoes",
+      "imageUrl": "https://images.vans.com/is/image/Vans/D3HY28-HERO?$583x583$",
+      "id": 3
+    },
+    {
+      "name": "jeans",
+      "imageUrl": "https://www.dunkelvolk.com/centralfile/00000007/productos/imagenes/princ/DKCA07017AZ32.jpg",
+      "id": 4
+    },
+    {
+      "name": "socks",
+      "imageUrl": "https://www.decathlon.es/media/815/8150414/big_ce41db06f49e4486b7302425a50eebe2.jpg",
+      "id": 5
+    },
+    {
+      "name": "Patatas",
+      "imageUrl": "https://www.abc.es/media/sociedad/2017/06/26/patatas-fritas-kQM--620x349@abc.jpg",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "description": "sdfgsdfgsfd",
+      "name": "fgsdfgdf",
+      "imageUrl": "http://www.sunprecautions.com/content/images/products/17100-3(prlgv)(studio)_900x1200.jpg",
+      "price": "23",
+      "categoryId": "1",
+      "inOffer": false,
+      "offerPrice": "43.5",
+      "id": 1
+    },
+    {
+      "description": "This is a blue shirt",
+      "name": "Blue shirt",
+      "imageUrl": "http://brandstore.vistaprint.in//render/undecorated/product/PVAG-0Q4K507W3K1Y/RS-K82Q06W655QY/jpeg?compression=95",
+      "price": "45",
+      "inOffer": true,
+      "offerPrice": 156,
+      "categoryId": "1",
+      "id": 2
+    },
+    {
+      "description": "incredibles shirt",
+      "name": "Incredibles shirt",
+      "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/file_fa236c4a.jpeg?width=1200",
+      "price": "23",
+      "inOffer": false,
+      "offerPrice": 156,
+      "categoryId": "1",
+      "id": 3
+    },
+    {
+      "description": "Unas patatas mu ricas",
+      "name": "Patatas Deluxe",
+      "imageUrl": "https://www.mcdonalds.es/sites/default/files/produits/patatasdeluxe.png",
+      "price": "3",
+      "inOffer": true,
+      "offerPrice": "5",
+      "categoryId": "6",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "description": "incredibles shirt",
+      "name": "Incredibles shirt",
+      "imageUrl": "https://lumiere-a.akamaihd.net/v1/images/file_fa236c4a.jpeg?width=1200",
+      "price": "234",
+      "inOffer": false,
+      "offerPrice": 1,
+      "categoryId": "1",
+      "id": 3
+    },
+    {
+      "description": "Unas patatas mu ricas",
+      "name": "Patatas Deluxe",
+      "imageUrl": "https://www.mcdonalds.es/sites/default/files/produits/patatasdeluxe.png",
+      "price": 3,
+      "inOffer": true,
+      "offerPrice": "5",
+      "categoryId": "6",
+      "id": 4
+    },
+    {
+      "description": "Unas patatas mu ricas",
+      "name": "Patatas Deluxe",
+      "imageUrl": "https://www.mcdonalds.es/sites/default/files/produits/patatasdeluxe.png",
+      "price": 3,
+      "inOffer": true,
+      "offerPrice": "5",
+      "categoryId": "6",
+      "id": 5
+    }
+  ]
+}

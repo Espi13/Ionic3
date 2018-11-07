@@ -1,0 +1,33 @@
+page-products {
+
+    .offer-price{
+        text-decoration: line-through;
+    }
+    .offer-price,
+    .normal-price{
+        font-weight: bold;
+    }
+    .image-container{
+        height: 300px;
+       
+        img{
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+    .item-container{
+        float: left;
+        margin: 20px;
+        width: 300px !important;
+    }
+    .name-product{
+        text-transform: uppercase;
+        color: color($colors,primary);
+        font-weight: bold;
+    }
+    .description-product{
+        color: color($colors, secondary);
+    }
+    
+}

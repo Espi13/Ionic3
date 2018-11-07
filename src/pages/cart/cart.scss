@@ -1,0 +1,19 @@
+page-cart {
+    .total-price{
+        float: right;
+    }
+    .price-container{
+        float:right; 
+    }
+    .remove-product-cart{
+        float:right; 
+        margin-right: 100px;
+    }
+
+    ion-label.label.label-md{
+        position: relative
+    }
+    .text-container{
+        float: left;
+    }
+}
